@@ -1,24 +1,36 @@
 import styles from './Sidebar.module.css'
 
-function Sidebar() {
+function Sidebar({ activeSidebar, onSidebarClick }) {
   return (
     <div className={styles.container}>
       <section className={styles.section}>
         <h3 className={styles.heading}>Favorites</h3>
         <nav className={styles.nav}>
-          <button className={styles.sidebarItem}>
+          <button
+            className={`${styles.sidebarItem} ${activeSidebar === 'about' ? styles.active : ''}`}
+            onClick={() => onSidebarClick('about')}
+          >
             <span className="material-symbols-outlined">person</span>
             <span>About Me</span>
           </button>
-          <button className={`${styles.sidebarItem} ${styles.active}`}>
+          <button
+            className={`${styles.sidebarItem} ${activeSidebar === 'projects' ? styles.active : ''}`}
+            onClick={() => onSidebarClick('projects')}
+          >
             <span className="material-symbols-outlined">folder_open</span>
             <span>Projects</span>
           </button>
-          <button className={styles.sidebarItem}>
+          <button
+            className={`${styles.sidebarItem} ${activeSidebar === 'experience' ? styles.active : ''}`}
+            onClick={() => onSidebarClick('experience')}
+          >
             <span className="material-symbols-outlined">work</span>
             <span>Experience</span>
           </button>
-          <button className={styles.sidebarItem}>
+          <button
+            className={`${styles.sidebarItem} ${activeSidebar === 'contact' ? styles.active : ''}`}
+            onClick={() => onSidebarClick('contact')}
+          >
             <span className="material-symbols-outlined">mail</span>
             <span>Contact</span>
           </button>
