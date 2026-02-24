@@ -88,7 +88,7 @@
 }
 
 /* Non-name columns in regular rows */
-.row div:not(.nameCell) {
+.row:not(.selected) div:not(.nameCell) {
     color: var(--color-text-muted);
 }
 
@@ -109,6 +109,7 @@
 .selected .nameCell {
     color: white;
 }
+
 
 .selected .nameCell span.material-symbols-outlined {
     color: white;
