@@ -1,10 +1,9 @@
-.pill {
-    background: rgba(30, 41, 59, 0.5);
-    padding: 2px 8px;
-    border-radius: 4px;
-    border: 1px solid var(--color-border);
-    color: var(--color-text-primary);
-    font-weight: 500;
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-content);
+    overflow: hidden;
 }
 
 .breadCrumb {
@@ -17,4 +16,122 @@
     font-size: 14px;
     color: var(--color-text-muted);
     background: var(--color-content);
+    flex-shrink: 0;
+}
+
+.breadCrumbArrow {
+    font-size: 14px;
+    color: var(--color-text-muted);
+}
+
+.pill {
+    background: rgba(30, 41, 59, 0.5);
+    padding: 2px 8px;
+    border-radius: 4px;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-primary);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pillIcon {
+    font-size: 16px;
+    color: var(--color-accent);
+}
+
+.columnHeaders {
+    display: grid;
+    grid-template-columns: 5fr 3fr 2fr 2fr;
+    gap: 16px;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    border-bottom: 1px solid var(--color-border);
+    user-select: none;
+    flex-shrink: 0;
+}
+
+.fileList {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 5fr 3fr 2fr 2fr;
+    gap: 16px;
+    padding: 6px 16px;
+    font-size: 14px;
+    align-items: center;
+    cursor: pointer;
+    color: var(--color-text-secondary);
+    border-bottom: 1px solid transparent;
+}
+
+.row:hover {
+    background: var(--color-hover);
+}
+
+.nameCell {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.nameCell span.material-symbols-outlined {
+    font-size: 20px;
+    color: var(--color-accent);
+}
+
+/* Non-name columns in regular rows */
+.row div:not(.nameCell) {
+    color: var(--color-text-muted);
+}
+
+/* Selected row */
+.selected {
+    background: var(--color-selection);
+    color: white;
+}
+
+.selected:hover {
+    background: var(--color-selection);
+}
+
+.selected div {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.selected .nameCell {
+    color: white;
+}
+
+.selected .nameCell span.material-symbols-outlined {
+    color: white;
+}
+
+.emptyRow {
+    height: 32px;
+    border-bottom: 1px solid transparent;
+}
+
+.emptyRow:hover {
+    background: var(--color-hover);
+}
+
+.statusBar {
+    height: 32px;
+    border-top: 1px solid var(--color-border);
+    background: var(--color-header);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    font-size: 12px;
+    color: var(--color-text-muted);
+    flex-shrink: 0;
 }
