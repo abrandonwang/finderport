@@ -44,7 +44,7 @@ function ContentArea({ currentPath, currentFolder, selectedItem, onSelect, onFol
       </div>
       <div className={styles.statusBar}>
         <span>{currentFolder.children.length} items{selectedItem ? ', 1 selected' : ''}</span>
-        <span>120 GB available</span>
+        <span>☕ fueled by coffee</span>
       </div>
     </div>
   )
