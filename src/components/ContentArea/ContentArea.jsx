@@ -5,7 +5,7 @@ function ContentArea({ currentPath, currentFolder, selectedItem, onSelect, onFol
     <div className={styles.container}>
       <div className={styles.breadCrumb}>
         <span className="material-symbols-outlined">desktop_mac</span>
-        <span>BrandonWang</span>
+        <span>{fileSystem.name}</span>
         {currentPath.length > 1 && (
           <>
             <span className={`material-symbols-outlined ${styles.breadCrumbArrow}`}>arrow_forward_ios</span>
@@ -38,9 +38,6 @@ function ContentArea({ currentPath, currentFolder, selectedItem, onSelect, onFol
             <div>{item.meta?.kind || item.type}</div>
           </div>
         ))}
-        <div className={styles.emptyRow}></div>
-        <div className={styles.emptyRow}></div>
-        <div className={styles.emptyRow}></div>
       </div>
       <div className={styles.statusBar}>
         <span>{currentFolder.children.length} items{selectedItem ? ', 1 selected' : ''}</span>

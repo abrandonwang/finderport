@@ -1,6 +1,14 @@
 import styles from './Sidebar.module.css'
+import {useState} from 'react'
 
 function Sidebar({ activeSidebar, onSidebarClick }) {
+  const [showToast, setShowToast] = useState(false)
+
+  function handleCopyEmail() {
+    navigator.clipboard.writeText('abrandonwang@gmail.com')
+    setShowToast(true)
+    setTimeout(() => setShowToast(false), 2000)
+  }
   return (
     <div className={styles.container}>
       <section className={styles.section}>
@@ -40,24 +48,24 @@ function Sidebar({ activeSidebar, onSidebarClick }) {
       <section className={styles.section}>
         <h3 className={styles.heading}>Locations</h3>
         <nav className={styles.nav}>
-          <a className={styles.sidebarItem} href="#">
+          <a className={styles.sidebarItem} href="https://github.com/abrandonwang" target = "_blank">
             <div className={`${styles.locationIcon} ${styles.iconGitHub}`}>
               <span className="material-symbols-outlined">code</span>
             </div>
             <span>GitHub</span>
           </a>
-          <a className={styles.sidebarItem} href="#">
+          <a className={styles.sidebarItem} href="https://linkedin.com/in/abrandonwang" target = "_blank">
             <div className={`${styles.locationIcon} ${styles.iconLinkedIn}`}>
               <span className="material-symbols-outlined">work_outline</span>
             </div>
             <span>LinkedIn</span>
           </a>
-          <a className={styles.sidebarItem} href="#">
+          <button className={styles.sidebarItem} onClick={handleCopyEmail}>
             <div className={`${styles.locationIcon} ${styles.iconEmail}`}>
               <span className="material-symbols-outlined">alternate_email</span>
             </div>
             <span>Email</span>
-          </a>
+          </button>
         </nav>
       </section>
 
@@ -82,6 +90,12 @@ function Sidebar({ activeSidebar, onSidebarClick }) {
           </button>
         </nav>
       </section>
+      {showToast && (
+        <div className = {styles.toast}>
+          <span className = "material-symbols-outlined">done</span>
+          <span>email copied to clipboard</span>
+        </div>
+      )}
     </div>
   )
 }

@@ -1,36 +1,47 @@
+:root {
+    /* Desktop */
+    --color-desktop: #e8e8e8;
+    
+    /* Window */
+    --color-sidebar: rgba(245, 245, 247, 0.85);
+    --color-content: #ffffff;
+    --color-header: rgba(245, 245, 247, 0.9);
+    --color-border: rgba(0, 0, 0, 0.12);
+    
+    /* Text */
+    --color-text-primary: #1d1d1f;
+    --color-text-secondary: #3a3a3c;
+    --color-text-muted: #86868b;
+    
+    /* Accent */
+    --color-selection: #7B2D8E;
+    --color-accent: #7B2D8E;
+    --color-hover: rgba(0, 0, 0, 0.04);
+    
+    /* Traffic lights */
+    --color-traffic-red: #ff5f57;
+    --color-traffic-yellow: #febc2e;
+    --color-traffic-green: #28c840;
+    
+    /* Fonts */
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+    --font-mono: 'SF Mono', 'JetBrains Mono', 'Fira Code', monospace;
+}
+
 *, *::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html, body, #root {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 body {
-  background: var(--color-desktop);
-  color: var(--color-text-primary);
-  font-family: var(--font-sans);
-  overflow: hidden;
-}
-
-:root {
-  --color-desktop: #0c0c0c;
-  --color-sidebar: rgba(30, 41, 59, 0.5);
-  --color-content: #0f172a;
-  --color-header: rgba(30, 41, 59, 0.9);
-  --color-border: rgba(51, 65, 85, 0.5);
-  --color-text-primary: #e2e8f0;
-  --color-text-secondary: #94a3b8;
-  --color-text-muted: #64748b;
-  --color-selection: #005ed1;
-  --color-hover: rgba(255, 255, 255, 0.05);
-  --color-traffic-red: #ff5f57;
-  --color-traffic-yellow: #febc2e;
-  --color-traffic-green: #28c840;
-  --color-accent: #005ed1;
-  --font-sans: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
-  --font-mono: 'SF Mono', 'JetBrains Mono', 'Fira Code', monospace;
+    background: var(--color-desktop);
+    color: var(--color-text-primary);
+    font-family: var(--font-sans);
+    overflow: hidden;
 }

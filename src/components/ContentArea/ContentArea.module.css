@@ -25,9 +25,9 @@
 }
 
 .pill {
-    background: rgba(30, 41, 59, 0.5);
+    background: rgba(0, 0, 0, 0.05);
     padding: 2px 8px;
-    border-radius: 4px;
+    border-radius: 10px;
     border: 1px solid var(--color-border);
     color: var(--color-text-primary);
     font-weight: 500;
@@ -42,6 +42,7 @@
 }
 
 .columnHeaders {
+    margin: 0 8px;
     display: grid;
     grid-template-columns: 5fr 3fr 2fr 2fr;
     gap: 16px;
@@ -60,6 +61,7 @@
 }
 
 .row {
+    margin: 0 8px;
     display: grid;
     grid-template-columns: 5fr 3fr 2fr 2fr;
     gap: 16px;
@@ -69,6 +71,7 @@
     cursor: pointer;
     color: var(--color-text-secondary);
     border-bottom: 1px solid transparent;
+    border-radius: 8px;
 }
 
 .row:hover {
@@ -87,12 +90,10 @@
     color: var(--color-accent);
 }
 
-/* Non-name columns in regular rows */
-.row:not(.selected) div:not(.nameCell) {
+.row div:not(.nameCell) {
     color: var(--color-text-muted);
 }
 
-/* Selected row */
 .selected {
     background: var(--color-selection);
     color: white;
@@ -102,22 +103,23 @@
     background: var(--color-selection);
 }
 
-.selected div {
-    color: rgba(255, 255, 255, 0.9);
+.selected div:not(.nameCell) {
+    color: white;
 }
 
 .selected .nameCell {
     color: white;
 }
 
-
 .selected .nameCell span.material-symbols-outlined {
     color: white;
 }
 
 .emptyRow {
+    margin: 0 8px;
     height: 32px;
     border-bottom: 1px solid transparent;
+    border-radius: 10px;
 }
 
 .emptyRow:hover {

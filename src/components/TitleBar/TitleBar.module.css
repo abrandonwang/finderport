@@ -28,17 +28,9 @@
     cursor: pointer;
 }
 
-.dot1 {
-    background: var(--color-traffic-red);
-}
-
-.dot2 {
-    background: var(--color-traffic-yellow);
-}
-
-.dot3 {
-    background: var(--color-traffic-green);
-}
+.dot1 { background: var(--color-traffic-red); }
+.dot2 { background: var(--color-traffic-yellow); }
+.dot3 { background: var(--color-traffic-green); }
 
 .navigation {
     display: flex;
@@ -60,22 +52,18 @@
     color: var(--color-text-primary);
 }
 
-.backArrow span {
-    font-size: 18px;
-}
+.backArrow span { font-size: 18px; }
 
 .disabled {
-    opacity: 0.5;
+    opacity: 0.3;
     cursor: not-allowed;
 }
 
-.forwardArrow span {
-    font-size: 18px;
-}
+.forwardArrow span { font-size: 18px; }
 
 .title {
     margin-left: 4px;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 14px;
     color: var(--color-text-primary);
     letter-spacing: 0.025em;
@@ -89,15 +77,15 @@
 
 .viewToggle {
     display: flex;
-    background: rgba(30, 41, 59, 0.5);
-    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 14px;
     padding: 2px;
     border: 1px solid var(--color-border);
 }
 
 .viewButton {
     padding: 6px;
-    border-radius: 6px;
+    border-radius: 10px;
     color: var(--color-text-muted);
     background: none;
     border: none;
@@ -107,30 +95,29 @@
 }
 
 .viewButton:hover {
-    background: rgba(51, 65, 85, 1);
+    background: rgba(0, 0, 0, 0.08);
     color: var(--color-text-primary);
 }
 
-.viewButton span {
-    font-size: 18px;
-}
+.viewButton span { font-size: 18px; }
 
 .active {
-    background: rgba(71, 85, 105, 1);
-    color: white;
+    background: white;
+    color: var(--color-text-primary);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .toolbarActions {
     display: flex;
-    background: rgba(30, 41, 59, 0.5);
-    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 14px;
     padding: 2px;
     border: 1px solid var(--color-border);
 }
 
 .toolbarButton {
     padding: 6px;
-    border-radius: 6px;
+    border-radius: 10px;
     color: var(--color-text-muted);
     background: none;
     border: none;
@@ -140,13 +127,11 @@
 }
 
 .toolbarButton:hover {
-    background: rgba(51, 65, 85, 1);
+    background: rgba(0, 0, 0, 0.08);
     color: var(--color-text-primary);
 }
 
-.toolbarButton span {
-    font-size: 18px;
-}
+.toolbarButton span { font-size: 18px; }
 
 .searchBar {
     position: relative;
@@ -163,11 +148,11 @@
 }
 
 .searchInput {
-    background: rgba(30, 41, 59, 0.5);
+    background: rgba(0, 0, 0, 0.05);
     border: 1px solid var(--color-border);
-    border-radius: 8px;
+    border-radius: 14px;
     padding: 6px 12px 6px 32px;
-    color: white;
+    color: var(--color-text-primary);
     font-size: 14px;
     width: 192px;
     outline: none;
@@ -180,6 +165,6 @@
 }
 
 .searchInput:focus {
-    border-color: var(--color-text-muted);
+    border-color: var(--color-accent);
     width: 256px;
 }

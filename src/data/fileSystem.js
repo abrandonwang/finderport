@@ -1,6 +1,6 @@
 const fileSystem = {
   id: "root",
-  name: "BrandonWang",
+  name: "brandonwang",
   type: "folder",
   children: [
     {
