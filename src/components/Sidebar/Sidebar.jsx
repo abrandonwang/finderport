@@ -5,7 +5,7 @@ function Sidebar({ activeSidebar, onSidebarClick }) {
   const [showToast, setShowToast] = useState(false)
 
   function handleCopyEmail() {
-    navigator.clipboard.writeText('your@email.com')
+    navigator.clipboard.writeText('brandonwang@u.northwestern.edu')
     setShowToast(true)
     setTimeout(() => setShowToast(false), 2000)
   }
@@ -49,13 +49,13 @@ function Sidebar({ activeSidebar, onSidebarClick }) {
       <section className={styles.section}>
         <h3 className={styles.heading}>Locations</h3>
         <nav className={styles.nav}>
-          <a className={styles.sidebarItem} href="https://github.com/YourUsername" target="_blank" rel="noopener noreferrer">
+          <a className={styles.sidebarItem} href="https://github.com/abrandonwang" target="_blank" rel="noopener noreferrer">
             <div className={`${styles.locationIcon} ${styles.iconGitHub}`}>
               <span className="material-symbols-outlined">code</span>
             </div>
             <span>GitHub</span>
           </a>
-          <a className={styles.sidebarItem} href="https://linkedin.com/in/YourUsername" target="_blank" rel="noopener noreferrer">
+          <a className={styles.sidebarItem} href="https://linkedin.com/in/abrandonwang" target="_blank" rel="noopener noreferrer">
             <div className={`${styles.locationIcon} ${styles.iconLinkedIn}`}>
               <span className="material-symbols-outlined">work_outline</span>
             </div>

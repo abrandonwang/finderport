@@ -10,7 +10,7 @@ function TitleBar({ title, onBack, canGoBack }) {
           <span className={styles.dot3}></span>
         </div>
         <div className={styles.navigation}>
-          <button onClick = {onBack ? onBack : undefined} className={`${styles.backArrow} ${!canGoBack ? styles.disabled : ''}`}>
+          <button onClick={onBack} className={`${styles.backArrow} ${!canGoBack ? styles.disabled : ''}`}>
             <span className="material-symbols-outlined">arrow_back_ios_new</span>
           </button>
           <button className={`${styles.forwardArrow} ${styles.disabled}`}>

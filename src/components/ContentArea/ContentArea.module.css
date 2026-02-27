@@ -126,16 +126,6 @@
     color: rgba(255, 255, 255, 0.8);
 }
 
-.emptyRow {
-    height: 28px;
-    border-radius: 10px;
-    margin: 0 4px;
-}
-
-.emptyRow:hover {
-    background: var(--color-hover);
-}
-
 .statusBar {
     height: 28px;
     border-top: 1px solid var(--color-border);

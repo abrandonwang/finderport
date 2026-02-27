@@ -2,7 +2,7 @@ import styles from './AppWindow.module.css'
 import TextEditView from '../TextEditView/TextEditView'
 import PreviewView from '../PreviewView/PreviewView'
 
-function AppWindow({ id, fileData, zIndex, onClose, onFocus }) {
+function AppWindow({ fileData, zIndex, onClose, onFocus }) {
   function renderContent() {
     switch (fileData.fileType) {
       case 'text':
