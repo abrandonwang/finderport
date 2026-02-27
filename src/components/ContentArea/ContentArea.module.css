@@ -58,6 +58,7 @@
 .fileList {
     flex: 1;
     overflow-y: auto;
+    transition: opacity 0.2s ease;
 }
 
 .row {

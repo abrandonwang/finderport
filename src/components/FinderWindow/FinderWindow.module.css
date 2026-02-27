@@ -18,3 +18,17 @@
     flex: 1;
     overflow: hidden;
 }
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 5;
+    border-radius: 24px;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

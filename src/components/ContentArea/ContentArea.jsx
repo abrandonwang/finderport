@@ -1,8 +1,22 @@
 import styles from './ContentArea.module.css'
-import {useRef} from 'react'
+import {useRef, useState, useEffect} from 'react'
 
 function ContentArea({ currentPath, currentFolder, selectedItem, onSelect, onFolderOpen, onFileOpen, fileSystem }) {
   const clickTimer = useRef(null)
+  const [visible, setVisible] = useState(true)
+  const prevPath = useRef(currentPath.join('/'))
+
+  useEffect(() => {
+    const newPath = currentPath.join('/')
+    if (prevPath.current !== newPath) {
+      setVisible(false)
+      const timer = setTimeout(() => {
+        setVisible(true)
+        prevPath.current = newPath
+      }, 120)
+      return () => clearTimeout(timer)
+    }
+  }, [currentPath])
   return (
     <div className={styles.container}>
       <div className={styles.breadCrumb}>

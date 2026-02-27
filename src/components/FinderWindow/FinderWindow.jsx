@@ -106,6 +106,16 @@ function FinderWindow() {
           fileSystem={fileSystem}
         />
       </div>
+      {openWindows.length > 0 && (
+        <div
+          className = {styles.overlay}
+          onClick={() => {
+            const topWindow = openWindows.reduce((a,b) => a.zIndex > b.zIndex ? a : b)
+            handleWindowClose(topWindow.id)
+          }}
+        />
+      )}
+
       <WindowManager
         windows={openWindows}
         onClose={handleWindowClose}
