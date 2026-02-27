@@ -1,6 +1,8 @@
 import styles from './ContentArea.module.css'
+import {useRef} from 'react'
 
-function ContentArea({ currentPath, currentFolder, selectedItem, onSelect, onFolderOpen, fileSystem }) {
+function ContentArea({ currentPath, currentFolder, selectedItem, onSelect, onFolderOpen, onFileOpen, fileSystem }) {
+  const clickTimer = useRef(null)
   return (
     <div className={styles.container}>
       <div className={styles.breadCrumb}>
@@ -27,8 +29,15 @@ function ContentArea({ currentPath, currentFolder, selectedItem, onSelect, onFol
           <div
             key={item.id}
             className={`${styles.row} ${selectedItem === item.id ? styles.selected : ''}`}
-            onClick={() => onSelect(item.id)}
-            onDoubleClick={() => item.type === 'folder' ? onFolderOpen(item.id) : null}>
+            onClick={() => {
+              onSelect(item.id)
+              if (item.type === 'folder') {
+                onFolderOpen(item.id)
+              } else {
+                onFileOpen(item)
+              }
+            }}
+          >
             <div className={styles.nameCell}>
               <span className="material-symbols-outlined">{item.icon || 'folder'}</span>
               <span>{item.name}</span>
