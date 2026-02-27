@@ -7,33 +7,35 @@
 }
 
 .breadCrumb {
-    height: 40px;
+    height: 38px;
     border-bottom: 1px solid var(--color-border);
     display: flex;
     align-items: center;
-    padding: 0 16px;
-    gap: 8px;
+    padding: 0 14px;
+    gap: 6px;
     font-size: 14px;
+    font-weight: 500;
     color: var(--color-text-muted);
     background: var(--color-content);
     flex-shrink: 0;
 }
 
 .breadCrumbArrow {
-    font-size: 14px;
+    font-size: 12px;
     color: var(--color-text-muted);
 }
 
 .pill {
     background: rgba(0, 0, 0, 0.05);
-    padding: 2px 8px;
+    padding: 3px 10px;
     border-radius: 10px;
     border: 1px solid var(--color-border);
     color: var(--color-text-primary);
-    font-weight: 500;
+    font-weight: 600;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 4px;
+    font-size: 13px;
 }
 
 .pillIcon {
@@ -42,37 +44,37 @@
 }
 
 .columnHeaders {
-    margin: 0 8px;
     display: grid;
-    grid-template-columns: 5fr 3fr 2fr 2fr;
-    gap: 16px;
-    padding: 8px 16px;
+    grid-template-columns: 3fr 2fr;
+    gap: 12px;
+    padding: 6px 14px;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--color-text-muted);
     border-bottom: 1px solid var(--color-border);
     user-select: none;
     flex-shrink: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
 }
 
 .fileList {
     flex: 1;
     overflow-y: auto;
-    transition: opacity 0.2s ease;
+    padding: 4px 0;
 }
 
 .row {
-    margin: 0 8px;
     display: grid;
-    grid-template-columns: 5fr 3fr 2fr 2fr;
-    gap: 16px;
-    padding: 6px 16px;
-    font-size: 14px;
+    grid-template-columns: 3fr 2fr;
+    gap: 12px;
+    padding: 8px 14px;
+    margin: 0 4px;
+    font-size: 15px;
     align-items: center;
     cursor: pointer;
     color: var(--color-text-secondary);
-    border-bottom: 1px solid transparent;
-    border-radius: 8px;
+    border-radius: 10px;
     user-select: none;
 }
 
@@ -83,17 +85,20 @@
 .nameCell {
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-weight: 500;
+    gap: 10px;
+    font-weight: 600;
 }
 
 .nameCell span.material-symbols-outlined {
-    font-size: 20px;
+    font-size: 22px;
     color: var(--color-accent);
 }
 
-.row div:not(.nameCell) {
+.detailCell {
+    font-size: 13px;
     color: var(--color-text-muted);
+    font-weight: 500;
+    text-align: right;
 }
 
 .selected {
@@ -105,7 +110,7 @@
     background: var(--color-selection);
 }
 
-.selected div:not(.nameCell) {
+.selected div {
     color: white;
 }
 
@@ -117,11 +122,14 @@
     color: white;
 }
 
+.selected .detailCell {
+    color: rgba(255, 255, 255, 0.8);
+}
+
 .emptyRow {
-    margin: 0 8px;
-    height: 32px;
-    border-bottom: 1px solid transparent;
+    height: 28px;
     border-radius: 10px;
+    margin: 0 4px;
 }
 
 .emptyRow:hover {
@@ -129,14 +137,15 @@
 }
 
 .statusBar {
-    height: 32px;
+    height: 28px;
     border-top: 1px solid var(--color-border);
     background: var(--color-header);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 16px;
+    padding: 0 14px;
     font-size: 12px;
     color: var(--color-text-muted);
     flex-shrink: 0;
+    font-weight: 600;
 }

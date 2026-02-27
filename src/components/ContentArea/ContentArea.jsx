@@ -34,9 +34,7 @@ function ContentArea({ currentPath, currentFolder, selectedItem, onSelect, onFol
       </div>
       <div className={styles.columnHeaders}>
         <div>Name</div>
-        <div>Tech Stack</div>
-        <div>Date Modified</div>
-        <div>Kind</div>
+        <div style={{textAlign: 'right'}}>Details</div>
       </div>
       <div className={styles.fileList}>
         {currentFolder.children.map(item => (
@@ -56,9 +54,9 @@ function ContentArea({ currentPath, currentFolder, selectedItem, onSelect, onFol
               <span className="material-symbols-outlined">{item.icon || 'folder'}</span>
               <span>{item.name}</span>
             </div>
-            <div>{item.meta?.techStack || item.meta?.size || '--'}</div>
-            <div>{item.meta?.modified || '--'}</div>
-            <div>{item.meta?.kind || item.type}</div>
+            <div className={styles.detailCell}>
+              {item.meta?.techStack || item.meta?.kind || item.type}
+            </div>
           </div>
         ))}
       </div>

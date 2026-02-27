@@ -19,34 +19,6 @@ function TitleBar({ title, onBack, canGoBack }) {
           <span className={styles.title}>{title}</span>
         </div>
       </div>
-      <div className={styles.rightSection}>
-        <div className={styles.viewToggle}>
-          <button className={styles.viewButton}>
-            <span className="material-symbols-outlined">grid_view</span>
-          </button>
-          <button className={`${styles.viewButton} ${styles.active}`}>
-            <span className="material-symbols-outlined">list</span>
-          </button>
-          <button className={styles.viewButton}>
-            <span className="material-symbols-outlined">view_column</span>
-          </button>
-        </div>
-        <div className={styles.toolbarActions}>
-          <button className={styles.toolbarButton}>
-            <span className="material-symbols-outlined">ios_share</span>
-          </button>
-          <button className={styles.toolbarButton}>
-            <span className="material-symbols-outlined">sell</span>
-          </button>
-          <button className={styles.toolbarButton}>
-            <span className="material-symbols-outlined">more_horiz</span>
-          </button>
-        </div>
-        <div className={styles.searchBar}>
-          <span className="material-symbols-outlined">search</span>
-          <input className={styles.searchInput} placeholder="Search" type="text" />
-        </div>
-      </div>
     </div>
   )
 }

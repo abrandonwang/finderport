@@ -1,14 +1,15 @@
+import { useState } from 'react'
 import styles from './Sidebar.module.css'
-import {useState} from 'react'
 
 function Sidebar({ activeSidebar, onSidebarClick }) {
   const [showToast, setShowToast] = useState(false)
 
   function handleCopyEmail() {
-    navigator.clipboard.writeText('abrandonwang@gmail.com')
+    navigator.clipboard.writeText('your@email.com')
     setShowToast(true)
     setTimeout(() => setShowToast(false), 2000)
   }
+
   return (
     <div className={styles.container}>
       <section className={styles.section}>
@@ -48,13 +49,13 @@ function Sidebar({ activeSidebar, onSidebarClick }) {
       <section className={styles.section}>
         <h3 className={styles.heading}>Locations</h3>
         <nav className={styles.nav}>
-          <a className={styles.sidebarItem} href="https://github.com/abrandonwang" target = "_blank">
+          <a className={styles.sidebarItem} href="https://github.com/YourUsername" target="_blank" rel="noopener noreferrer">
             <div className={`${styles.locationIcon} ${styles.iconGitHub}`}>
               <span className="material-symbols-outlined">code</span>
             </div>
             <span>GitHub</span>
           </a>
-          <a className={styles.sidebarItem} href="https://linkedin.com/in/abrandonwang" target = "_blank">
+          <a className={styles.sidebarItem} href="https://linkedin.com/in/YourUsername" target="_blank" rel="noopener noreferrer">
             <div className={`${styles.locationIcon} ${styles.iconLinkedIn}`}>
               <span className="material-symbols-outlined">work_outline</span>
             </div>
@@ -69,31 +70,10 @@ function Sidebar({ activeSidebar, onSidebarClick }) {
         </nav>
       </section>
 
-      <section className={styles.section}>
-        <h3 className={styles.heading}>Tags</h3>
-        <nav className={styles.nav}>
-          <button className={styles.sidebarItem}>
-            <div className={`${styles.tagDot} ${styles.dotReact}`}></div>
-            <span>React</span>
-          </button>
-          <button className={styles.sidebarItem}>
-            <div className={`${styles.tagDot} ${styles.dotJS}`}></div>
-            <span>JavaScript</span>
-          </button>
-          <button className={styles.sidebarItem}>
-            <div className={`${styles.tagDot} ${styles.dotPython}`}></div>
-            <span>Python</span>
-          </button>
-          <button className={styles.sidebarItem}>
-            <div className={`${styles.tagDot} ${styles.dotCSS}`}></div>
-            <span>CSS</span>
-          </button>
-        </nav>
-      </section>
       {showToast && (
-        <div className = {styles.toast}>
-          <span className = "material-symbols-outlined">done</span>
-          <span>email copied to clipboard</span>
+        <div className={styles.toast}>
+          <span className="material-symbols-outlined">done</span>
+          <span>Email copied to clipboard</span>
         </div>
       )}
     </div>

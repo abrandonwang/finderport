@@ -24,7 +24,7 @@
     --color-traffic-green: #28c840;
     
     /* Fonts */
-    --font-sans: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+    --font-sans: 'Nunito', -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
     --font-mono: 'SF Mono', 'JetBrains Mono', 'Fira Code', monospace;
 }
 

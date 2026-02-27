@@ -20,11 +20,11 @@ const fileSystem = {
             size: "2 KB",
             kind: "Text Document"
           },
-          content: "Hey, I'm Brandon Wang. REPLACE THIS WITH YOUR ACTUAL BIO. Talk about who you are, what you study, what you're passionate about, what you're looking for."
+          content: "Hey, I'm Brandon. I'm studying cs at northwestern and love to explore new technologies and play music. I am most intrigued by web design and the many intricate layers to a deceptively simple discipline."
         },
         {
           id: "headshot",
-          name: "Headshot.png",
+          name: "headshot.png",
           type: "file",
           icon: "image",
           fileType: "image",
@@ -33,7 +33,7 @@ const fileSystem = {
             size: "340 KB",
             kind: "PNG Image"
           },
-          content: "/images/headshot.png"
+          content: "/images/IMG_6116.png"
         },
         {
           id: "skills",
@@ -78,7 +78,7 @@ const fileSystem = {
                 size: "3 KB",
                 kind: "Markdown"
               },
-              content: "# Portfolio Site\n\nA personal portfolio website styled as a macOS Finder window. Built with React and GSAP for animations.\n\n## Features\n- macOS Finder-inspired UI\n- Folder navigation system\n- Animated window popups\n- Responsive design"
+              content: "# Portfolio Site\n\nA personal portfolio website styled as a finder window. Built with React and GSAP for animations.\n\n## Features\n- finder-inspired UI\n- Folder navigation system\n- window popups\n- Responsive design"
             },
             {
               id: "portfolio-screenshot",
@@ -91,7 +91,7 @@ const fileSystem = {
                 size: "450 KB",
                 kind: "PNG Image"
               },
-              content: "/images/portfolio-preview.png"
+              content: "/images/preview.png"
             },
             {
               id: "portfolio-live",
@@ -143,7 +143,7 @@ const fileSystem = {
                 size: "2 KB",
                 kind: "Markdown"
               },
-              content: "# Card Game\n\nREPLACE WITH YOUR DESCRIPTION"
+              content: "# Concentration\n\nSimple flipping card game used to initially develop my js skills. Goal is to flip two cards and match them correctly with the intent of solving it in the fewest number of moves and shortest amount of time possible."
             },
             {
               id: "card-github",
@@ -157,45 +157,6 @@ const fileSystem = {
                 kind: "URL"
               },
               content: "https://github.com/abrandonwang/card-game"
-            }
-          ]
-        },
-        {
-          id: "music-project",
-          name: "Music Project",
-          type: "folder",
-          icon: "folder",
-          meta: {
-            techStack: "Python",
-            modified: "Mar 10, 2022",
-            kind: "Folder"
-          },
-          children: [
-            {
-              id: "music-readme",
-              name: "README.md",
-              type: "file",
-              icon: "description",
-              fileType: "text",
-              meta: {
-                modified: "Mar 10, 2022",
-                size: "2 KB",
-                kind: "Markdown"
-              },
-              content: "# Music Project\n\nREPLACE WITH YOUR DESCRIPTION"
-            },
-            {
-              id: "music-github",
-              name: "GitHub.url",
-              type: "file",
-              icon: "link",
-              fileType: "link",
-              meta: {
-                modified: "Mar 10, 2022",
-                size: "--",
-                kind: "URL"
-              },
-              content: "https://github.com/BrandonWang/musicproject"
             }
           ]
         }
@@ -212,13 +173,13 @@ const fileSystem = {
           name: "Resume.pdf",
           type: "file",
           icon: "picture_as_pdf",
-          fileType: "pdf",
+          fileType: "link",
           meta: {
             modified: "Feb 01, 2026",
             size: "156 KB",
             kind: "PDF Document"
           },
-          content: "/files/resume.pdf"
+          content: "/files/Resume.pdf"
         },
         {
           id: "timeline",
@@ -231,7 +192,7 @@ const fileSystem = {
             size: "1 KB",
             kind: "Text Document"
           },
-          content: "REPLACE WITH YOUR TIMELINE\n\n2024 - Present: Whatever you're doing now\n2023: Previous role or school\n2022: Earlier experience"
+          content: "September 2025 - Present: Started at Northwestern\nJune 2025: Graduated High School\nDecember 2024: Finished my economics research project"
         }
       ]
     },
@@ -253,19 +214,6 @@ const fileSystem = {
             kind: "Text Document"
           },
           content: "brandonwang@u.northwestern.edu\n\nFeel free to reach out!"
-        },
-        {
-          id: "contact-form",
-          name: "ContactForm.app",
-          type: "file",
-          icon: "mail",
-          fileType: "mail",
-          meta: {
-            modified: "Jan 01, 2026",
-            size: "4 KB",
-            kind: "Application"
-          },
-          content: "form"
         },
         {
           id: "contact-github",

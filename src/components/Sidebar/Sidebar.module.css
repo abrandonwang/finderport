@@ -1,11 +1,11 @@
 .container {
-    width: 220px;
+    width: 180px;
     background: var(--color-sidebar);
     border-right: 1px solid var(--color-border);
     display: flex;
     flex-direction: column;
-    padding: 12px;
-    gap: 24px;
+    padding: 10px 8px;
+    gap: 16px;
     overflow-y: auto;
     flex-shrink: 0;
 }
@@ -24,7 +24,7 @@
     font-weight: 700;
     color: var(--color-text-muted);
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
     padding: 0 8px;
     margin-bottom: 4px;
 }
@@ -32,16 +32,17 @@
 .nav {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 1px;
 }
 
 .sidebarItem {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 6px 8px;
+    padding: 7px 10px;
     border-radius: 12px;
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: 600;
     color: var(--color-text-secondary);
     text-decoration: none;
     cursor: pointer;
@@ -52,19 +53,19 @@
     width: 100%;
 }
 
-.sidebarItem:not(.active):hover {
+.sidebarItem:hover {
     background: var(--color-hover);
 }
 
 .sidebarItem span.material-symbols-outlined {
-    font-size: 18px;
+    font-size: 20px;
     color: var(--color-accent);
 }
 
 .active {
     background: var(--color-accent);
     color: white;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .active span.material-symbols-outlined {
@@ -72,9 +73,9 @@
 }
 
 .locationIcon {
-    width: 18px;
-    height: 18px;
-    border-radius: 8px;
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -89,19 +90,6 @@
 .iconGitHub { background: #475569; }
 .iconLinkedIn { background: #2563eb; }
 .iconEmail { background: #16a34a; }
-
-.tagDot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    flex-shrink: 0;
-}
-
-.dotReact { background: #3b82f6; }
-.dotJS { background: #eab308; }
-.dotPython { background: #22c55e; }
-.dotCSS { background: #f97316; }
-
 
 .toast {
     position: fixed;
@@ -123,26 +111,15 @@
 
 .toast span.material-symbols-outlined {
     font-size: 20px;
+    color: #28c840;
 }
 
 @keyframes toastIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes toastOut {
-    from {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    to {
-        opacity: 0;
-        transform: translateY(10px);
-    }
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(10px); }
 }
