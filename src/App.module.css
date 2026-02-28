@@ -1,20 +1,117 @@
-.desktop {
+/* ---- Page ---- */
+.page {
     width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: lightblue;
+    min-height: 100vh;
+    background: #0c0c0c;
+    color: white;
     position: relative;
     overflow: hidden;
 }
 
-.backgroundGlow {
+/* ---- Floating Name ---- */
+.floatingName {
+    position: fixed;
+    top: 24px;
+    left: 32px;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.4);
+    z-index: 50;
+    letter-spacing: 0.03em;
+}
+
+/* ---- Floating Links ---- */
+.floatingLinks {
+    position: fixed;
+    top: 24px;
+    right: 32px;
+    display: flex;
+    gap: 24px;
+    z-index: 50;
+}
+
+.floatingLinks a {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.35);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+.floatingLinks a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* ---- Hero ---- */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 16px;
+    padding: 0 32px;
+}
+
+.title {
+    font-size: 72px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.4);
+    text-align: center;
+    max-width: 400px;
+    line-height: 1.6;
+}
+
+.cta {
+    margin-top: 32px;
+    padding: 14px 32px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: inherit;
+}
+
+.cta:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* ---- Modal ---- */
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: modalFadeIn 0.3s ease;
+}
+
+.modalBackdrop {
     position: absolute;
     inset: 0;
-    z-index: 0;
+    background: rgba(12, 12, 12, 0.85);
+}
+
+/* ---- Orbs ---- */
+.orbContainer {
+    position: absolute;
+    inset: 0;
     overflow: hidden;
-    opacity: 0.4;
+    opacity: 0.3;
+    pointer-events: none;
 }
 
 .orb {
@@ -29,7 +126,7 @@
     background: #ff6b6b;
     top: -10%;
     left: -5%;
-    animation: drift1 10s ease-in-out infinite;
+    animation: drift1 35s ease-in-out infinite;
 }
 
 .orb2 {
@@ -38,7 +135,7 @@
     background: #ffd93d;
     top: 60%;
     left: 20%;
-    animation: drift2 12s ease-in-out infinite;
+    animation: drift2 40s ease-in-out infinite;
 }
 
 .orb3 {
@@ -47,7 +144,7 @@
     background: #6bcb77;
     top: 10%;
     right: -10%;
-    animation: drift3 11s ease-in-out infinite;
+    animation: drift3 38s ease-in-out infinite;
 }
 
 .orb4 {
@@ -56,7 +153,7 @@
     background: #4d96ff;
     bottom: -5%;
     right: 20%;
-    animation: drift4 9s ease-in-out infinite;
+    animation: drift4 32s ease-in-out infinite;
 }
 
 .orb5 {
@@ -65,7 +162,7 @@
     background: #9b59b6;
     top: 40%;
     left: 50%;
-    animation: drift5 13s ease-in-out infinite;
+    animation: drift5 42s ease-in-out infinite;
 }
 
 @keyframes drift1 {
@@ -103,7 +200,21 @@
     75% { transform: translate(-30px, -50px); }
 }
 
-.finderWrapper {
+/* ---- Finder Container ---- */
+.finderContainer {
     position: relative;
     z-index: 1;
+    width: 65%;
+    height: 70vh;
+    max-width: 1000px;
+}
+
+/* ---- Animations ---- */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
