@@ -147,7 +147,7 @@ const fileSystem = {
             },
             {
               id: "card-github",
-              name: "GitHub.url",
+              name: "tryitout.url",
               type: "file",
               icon: "link",
               fileType: "link",
@@ -156,7 +156,7 @@ const fileSystem = {
                 size: "--",
                 kind: "URL"
               },
-              content: "https://github.com/abrandonwang/card-game"
+              content: "https://abrandonwang.github.io/card-game/"
             }
           ]
         }
